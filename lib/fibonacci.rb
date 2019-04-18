@@ -8,5 +8,20 @@
 # Time complexity: ?
 # Space complexity: ?
 def fibonacci(n)
-  raise NotImplementedError
+  if n.nil? || n < 0
+    raise ArgumentError
+  end
+  if n == 0
+    return 0
+  else
+    p1 = 0
+    p2 = 1
+
+    (n - 1).times do
+      p = p1 + p2
+      p1 = p2
+      p2 = p
+    end
+    return p2
+  end
 end
