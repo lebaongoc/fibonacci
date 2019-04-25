@@ -5,8 +5,8 @@
 # ....
 # e.g. 6th fibonacci number is 8
 
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n), n is the number of computations this calculation needs to run to compute the nth fibonacci number
+# Space complexity: O(1), space complexity is constant because this method only require a storage for 3 variables (p,p1,p2) regardless of number of operations
 def fibonacci(n)
   if n.nil? || n < 0
     raise ArgumentError
